@@ -1,0 +1,226 @@
+[gd_scene load_steps=12 format=3 uid="uid://baiwaon41fk6u"]
+
+[ext_resource type="Script" path="res://addons/godotversionupdater/dock.gd" id="1_gifpy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m203f"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+
+[sub_resource type="SystemFont" id="SystemFont_xstvk"]
+font_weight = 800
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7nmsm"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytgkd"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0.101961, 0.156863, 0.207843, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_nul8h"]
+font_weight = 600
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_po5f6"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0.166272, 0.242509, 0.313352, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.101961, 0.156863, 0.207843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqs3i"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0.101961, 0.156863, 0.207843, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.211978, 0.302428, 0.386547, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wf4fk"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.101961, 0.156863, 0.207843, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.166272, 0.242509, 0.313352, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f7b7d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv4gc"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.101961, 0.156863, 0.207843, 0.313726)
+
+[node name="GodotVersionUpdater" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_gifpy")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_m203f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="DirectoryLocation" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/DirectoryLocation"]
+layout_mode = 2
+size_flags_vertical = 5
+theme_override_fonts/font = SubResource("SystemFont_xstvk")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7nmsm")
+text = "SAVE Directory:"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="DirectoryLabel" type="Label" parent="ScrollContainer/VBoxContainer/DirectoryLocation"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+theme_override_colors/font_color = Color(1, 1, 1, 0.690196)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_ytgkd")
+text = "C:/Users/chris/Downloads"
+vertical_alignment = 1
+
+[node name="DirectoryButton" type="Button" parent="ScrollContainer/VBoxContainer/DirectoryLocation"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_nul8h")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_po5f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cqs3i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_po5f6")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_po5f6")
+theme_override_styles/focus = SubResource("StyleBoxFlat_po5f6")
+text = "NEW DIRECTORY
+"
+
+[node name="Console" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 2
+theme_override_colors/default_color = Color(0.674815, 0.674815, 0.674815, 1)
+theme_override_constants/line_separation = 5
+theme_override_font_sizes/normal_font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_wf4fk")
+bbcode_enabled = true
+text = "Console initialized.
+"
+scroll_following = true
+selection_enabled = true
+
+[node name="VersionData" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="CurrentVersionLabel" type="Label" parent="ScrollContainer/VBoxContainer/VersionData"]
+layout_mode = 2
+size_flags_vertical = 5
+theme_override_colors/font_color = Color(1, 1, 1, 0.690196)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f7b7d")
+text = "Current Version: 4.2.2-stable (official)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LatestVersionLabel" type="Label" parent="ScrollContainer/VBoxContainer/VersionData"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+theme_override_colors/font_color = Color(1, 1, 1, 0.690196)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f7b7d")
+text = "Latest Version: 4.3-stable"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/VBoxContainer/VersionData"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_nv4gc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nv4gc")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_nv4gc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nv4gc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_nv4gc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nv4gc")
+text = ".NET Support Enabled"
+
+[node name="UpdateButton" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_nul8h")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_po5f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cqs3i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_po5f6")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_po5f6")
+theme_override_styles/focus = SubResource("StyleBoxFlat_po5f6")
+text = "DOWNLOAD UPDATE"
+
+[node name="FileDialog" type="FileDialog" parent="ScrollContainer"]
+title = "Open a Directory"
+initial_position = 2
+size = Vector2i(566, 264)
+theme_override_colors/folder_icon_color = Color(0.840674, 1, 0.824239, 1)
+ok_button_text = "Select Current Folder"
+file_mode = 2
+access = 2
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/DirectoryLocation/DirectoryButton" to="." method="_on_directory_button_pressed"]
+[connection signal="toggled" from="ScrollContainer/VBoxContainer/VersionData/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/UpdateButton" to="." method="_on_update_button_pressed"]
+[connection signal="confirmed" from="ScrollContainer/FileDialog" to="." method="_on_file_dialog_confirmed"]
+[connection signal="dir_selected" from="ScrollContainer/FileDialog" to="." method="_on_file_dialog_dir_selected"]
