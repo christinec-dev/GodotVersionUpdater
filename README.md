@@ -10,7 +10,7 @@ Join my Discord if you want to give feedback on this plugin or to help me update
 - Figure out how to add it to the Project Window, instead of the in-project workspace.
 
 ## Links
-- [Wiki]()
+- [Wiki](https://github.com/christinec-dev/GodotVersionUpdater/wiki)
 - [AssetLib Download]()
 
 ## Usage Instructions 
