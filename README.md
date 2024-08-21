@@ -7,7 +7,7 @@ This plugin is a work-in-progress tool. Please know that I do not own a MacBook,
 Join my Discord if you want to give feedback on this plugin or to help me update it: https://discord.gg/FnD8355w
 
 ### Next Steps
-- Figure out how to add it to the Project Window, instead of the in-project Main Screen.
+- Figure out how to add it to the Project Window, instead of the in-project workspace.
 
 ## Links
 - [Wiki]()
